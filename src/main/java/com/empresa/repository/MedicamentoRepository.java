@@ -8,8 +8,8 @@ import com.empresa.entity.Medicamento;
 
 public interface MedicamentoRepository extends JpaRepository<Medicamento, Integer> {
 	
-	public List<Medicamento> findByLaboratorioLike(String laboratorio); //BÚSQUEDA POR LABORATORIO
-	public List<Medicamento> findByNombreLike(String nombre); // BÚSQUEDA POR NOMBRE
-	public List<Medicamento> findByIdMedicamento(int id); // BÚSQUEDA POR ID - CÓDIGO DEL MEDICAMENTO
+	public List<Medicamento> findByLaboratorioLike(String laboratorio);  //busqueda ppr lab
+	public List<Medicamento> findByNombreLike(String nombre); //por nombre 
+	public List<Medicamento> findByIdMedicamento(int id); // por id
 
 }

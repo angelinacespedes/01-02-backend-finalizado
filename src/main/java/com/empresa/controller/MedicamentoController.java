@@ -19,24 +19,24 @@ public class MedicamentoController {
 	private MedicamentoService serviceMed;
 	
 	@GetMapping
-	public List<Medicamento> listaMedicamento(){ // http://localhost:8090/url/medicamento
+	public List<Medicamento> listaMedicamento(){ 
 		List<Medicamento> lstSalida = serviceMed.listaMedicamento();
 		return lstSalida;
 	}
 	
-	@GetMapping("/porLaboratorio/{laboratorio}") // http://localhost:8090/url/medicamento/porLaboratorio/aaaa
+	@GetMapping("/porLaboratorio/{laboratorio}") 
 	public List<Medicamento> listaLaboratorio(@PathVariable("laboratorio") String laboratorio){
 		List<Medicamento> lstSalida = serviceMed.listadoPorLaboratorio(laboratorio + "%");
 		return lstSalida;
 	}
 	
-	@GetMapping("/porNombre/{nombre}") // http://localhost:8090/url/medicamento/porNombre/Vics
+	@GetMapping("/porNombre/{nombre}")
 	public List<Medicamento> listaNombreMedicamento(@PathVariable("nombre") String nombre){
 		List<Medicamento> lstSalida = serviceMed.listadoPorNombre(nombre + "%");
 		return lstSalida;
 	}
 	
-	@GetMapping("/porId/{idMedicamento}") // http://localhost:8090/url/medicamento/porId/2
+	@GetMapping("/porId/{idMedicamento}")
 	public List<Medicamento> listadoPorId(@PathVariable("idMedicamento") int id){
 		List<Medicamento> lstSalida = serviceMed.listadoPorIdMedicamento(id);
 		return lstSalida;
